@@ -1,4 +1,7 @@
 # 1.0.0-b2
+Fixed missing meta package.
+
+# 1.0.0-b2
 Added the lint package and resolved all lints.
 removed redundant dyanmic?
 corrected home page url.
