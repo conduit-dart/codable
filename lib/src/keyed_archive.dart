@@ -55,7 +55,7 @@ class KeyedArchive extends Object
   ///
   /// If [allowReferences] is true, JSON Schema references in the emitted document will be validated.
   /// Defaults to false.
-  static Map<String?, dynamic> archive(Coding root,
+  static Map<String, dynamic> archive(Coding root,
       {bool allowReferences = false}) {
     final archive = KeyedArchive({});
     root.encode(archive);
