@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:conduit_codable/codable.dart';
+import 'package:conduit_codable/conduit_codable.dart';
 import 'package:test/test.dart';
 
 void main() {
