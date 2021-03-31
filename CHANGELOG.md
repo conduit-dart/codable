@@ -1,3 +1,6 @@
+# 1.0.0-b3
+Corrected the main library file's name to match the dart package name as per dart conventions.
+
 # 1.0.0-b2
 Fixed missing meta package.
 
