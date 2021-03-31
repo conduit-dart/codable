@@ -127,11 +127,11 @@ class KeyedArchive extends Object
     }
   }
 
-  operator []=(String key, dynamic? value) {
+  operator []=(String key, dynamic value) {
     _map[key] = value;
   }
 
-  dynamic? operator [](Object? key) => _getValue(key as String);
+  dynamic operator [](Object? key) => _getValue(key as String);
 
   Iterable<String> get keys => _map.keys;
 
@@ -139,8 +139,8 @@ class KeyedArchive extends Object
 
   dynamic remove(Object? key) => _map.remove(key);
 
-  Map<String?, dynamic> toPrimitive() {
-    final out = <String?, dynamic>{};
+  Map<String, dynamic> toPrimitive() {
+    final out = <String, dynamic>{};
     _map.forEach((key, val) {
       if (val is KeyedArchive) {
         out[key] = val.toPrimitive();
@@ -232,9 +232,9 @@ class KeyedArchive extends Object
       return null;
     }
 
-    if (T is Uri) {
+    if (T == Uri) {
       return Uri.parse(v) as T;
-    } else if (T is DateTime) {
+    } else if (T == DateTime) {
       return DateTime.parse(v) as T;
     }
 
