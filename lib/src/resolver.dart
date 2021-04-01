@@ -26,11 +26,7 @@ class ReferenceResolver {
     final folded = ref.pathSegments.fold<KeyedArchive?>(document,
         (KeyedArchive? objectPtr, pathSegment) {
       if (objectPtr != null) {
-        // this is the problematic line
-        // what type is objectPtr[pathSegment]
-        // this assignment is a wild guess
         return objectPtr[pathSegment] as KeyedArchive?;
-        // KeyedArchive.empty(); // [objectPtr[pathSegment]);
       } else {
         return null;
       }
