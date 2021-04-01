@@ -127,12 +127,12 @@ class KeyedArchive extends Object
 
   /// store the [key]/[value] pair into the map
   @override
-  void operator []=(String key, dynamic value) {
+  void operator []=(covariant String key, dynamic value) {
     _map[key] = value;
   }
 
   @override
-  dynamic operator [](Object? key) => _getValue(key as String?);
+  dynamic operator [](covariant Object key) => _getValue(key as String);
 
   @override
   Iterable<String> get keys => _map.keys;
